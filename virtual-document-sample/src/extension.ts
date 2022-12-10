@@ -48,7 +48,7 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 		vscode.workspace.onWillSaveTextDocument(() => {
 			console.log('registering did save');
 			return vscode.commands.registerCommand('cowsay.didSave', () => {
-				// console.log('didSave');
+				console.log('didSave');
 			});
 		})
 	);
