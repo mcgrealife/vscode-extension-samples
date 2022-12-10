@@ -60,7 +60,8 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 			}
 			const { document } = vscode.window.activeTextEditor;
 			if (document.uri.scheme !== myScheme) {
-				return; // not my scheme
+				// not my scheme
+				return;
 			}
 			console.log('attempting save', await document.save());
 			// get path-components, reverse it, and create a new uri
