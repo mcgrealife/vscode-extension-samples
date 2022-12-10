@@ -1,5 +1,4 @@
 declare module 'cowsay' {
-
 	export interface CowsayOptions {
 		text: string;
 		cow?: string;
@@ -7,8 +6,9 @@ declare module 'cowsay' {
 		tongue?: string;
 		wrap?: boolean;
 		wrapLength?: number;
-		mode?: 'b' | 'd' | 'g' | 'p' | 's' | 't' | 'w' | 'y'
+		mode?: 'b' | 'd' | 'g' | 'p' | 's' | 't' | 'w' | 'y';
 	}
 
 	export function say(options: CowsayOptions): string;
+	export function think(options: CowsayOptions): string;
 }
